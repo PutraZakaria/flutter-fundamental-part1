@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/basic_widgets/fab_widget.dart';
-import 'package:hello_world/basic_widgets/loading_cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
-  } 
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const FabWidget(),
+            const Text(
+              'You have pushed the button this many times:',
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
